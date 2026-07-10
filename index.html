@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>কৃষি পোর্টাল - ঋতুভিত্তিক সবজি চাষ গাইড</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>🌱 কৃষি পোর্টাল</h1>
+            <p>ঋতুভিত্তিক সবজি চাষ গাইড</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <div class="container">
+            <ul>
+                <li><a href="#home">হোম</a></li>
+                <li><a href="#seasons">ঋতু</a></li>
+                <li><a href="#vegetables">সবজি</a></li>
+                <li><a href="#about">সম্পর্কে</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main>
+        <!-- হোম সেকশন -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h2>বাংলাদেশে কৃষি চাষ করুন স্মার্ট উপায়ে</h2>
+                <p>প্রতিটি ঋতুতে কি সবজি চাষ করবেন, কিভাবে যত্ন নেবেন এবং তার উপকারিতা জানুন।</p>
+            </div>
+        </section>
+
+        <!-- ঋতু নির্বাচন -->
+        <section id="seasons" class="seasons">
+            <div class="container">
+                <h2>আপনার ঋতু বেছে নিন</h2>
+                <div class="season-grid">
+                    <div class="season-card" onclick="showSeason('grisma')">
+                        ☀️ গ্রীষ্মকাল
+                        <p>(এপ্রিল - জুন)</p>
+                    </div>
+                    <div class="season-card" onclick="showSeason('barsa')">
+                        🌧️ বর্ষাকাল
+                        <p>(জুলাই - সেপ্টেম্বর)</p>
+                    </div>
+                    <div class="season-card" onclick="showSeason('sharot')">
+                        🍂 শরৎকাল
+                        <p>(অক্টোবর - নভেম্বর)</p>
+                    </div>
+                    <div class="season-card" onclick="showSeason('hemonto')">
+                        🌫️ হেমন্তকাল
+                        <p>(নভেম্বর - ডিসেম্বর)</p>
+                    </div>
+                    <div class="season-card" onclick="showSeason('shit')">
+                        ❄️ শীতকাল
+                        <p>(ডিসেম্বর - ফেব্রুয়ারি)</p>
+                    </div>
+                    <div class="season-card" onclick="showSeason('bosonto')">
+                        🌸 বসন্তকাল
+                        <p>(মার্চ - এপ্রিল)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- সবজি তথ্য প্রদর্শন -->
+        <section id="vegetables" class="vegetables-section">
+            <div class="container">
+                <h2 id="seasonTitle">ঋতু নির্বাচন করুন</h2>
+                <div id="vegetablesList" class="vegetables-grid">
+                    <!-- জাভাস্ক্রিপ্ট দ্বারা পূরণ করা হবে -->
+                </div>
+            </div>
+        </section>
+
+        <!-- মোডাল - সবজির বিস্তারিত -->
+        <div id="vegetableModal" class="modal">
+            <div class="modal-content">
+                <span class="close" onclick="closeModal()">&times;</span>
+                <h2 id="modalTitle"></h2>
+                <div id="modalBody"></div>
+            </div>
+        </div>
+
+        <!-- সম্পর্কে সেকশন -->
+        <section id="about" class="about">
+            <div class="container">
+                <h2>এই ওয়েবসাইট সম্পর্কে</h2>
+                <p>কৃষি পোর্টাল বাংলাদেশের কৃষকদের জন্য একটি তথ্য ভিত্তিক প্ল্যাটফর্ম। এখানে আপনি প্রতিটি ঋতুতে কি সবজি চাষ করতে পারেন, কিভাবে যত্ন নেবেন এবং তার পুষ্টিগুণ সম্পর্কে জানতে পারবেন।</p>
+                <p><strong>উন্নয়নকারী:</strong> কৃষি উদ্যোক্তা সম্প্রদায়</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 কৃষি পোর্টাল | সকল অধিকার সংরক্ষিত | বাংলাদেশ</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
