@@ -1,0 +1,289 @@
+/* সাধারণ স্টাইল */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* হেডার */
+header {
+    background: linear-gradient(135deg, #2ecc71 0%, #27ae60 100%);
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+    opacity: 0.9;
+}
+
+/* নেভিগেশন বার */
+.navbar {
+    background-color: #229954;
+    padding: 15px 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+.navbar a:hover {
+    background-color: #1e8449;
+    transform: scale(1.05);
+}
+
+/* হিরো সেকশন */
+.hero {
+    background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+    color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.1em;
+    opacity: 0.95;
+}
+
+/* ঋতু নির্বাচন */
+.seasons {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.seasons h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #2ecc71;
+}
+
+.season-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+}
+
+.season-card {
+    background: linear-gradient(135deg, #f39c12 0%, #e67e22 100%);
+    color: white;
+    padding: 30px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 1.3em;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.season-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+.season-card p {
+    font-size: 0.9em;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
+/* সবজি তালিকা */
+.vegetables-section {
+    padding: 60px 0;
+    background-color: #ecf0f1;
+}
+
+.vegetables-section h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 40px;
+    color: #2c3e50;
+}
+
+.vegetables-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.vegetable-card {
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    cursor: pointer;
+    transition: 0.3s;
+    border-left: 5px solid #2ecc71;
+}
+
+.vegetable-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.vegetable-card h3 {
+    color: #2ecc71;
+    margin-bottom: 10px;
+}
+
+.vegetable-card p {
+    color: #555;
+    font-size: 0.95em;
+}
+
+/* মোডাল */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+    animation: fadeIn 0.3s;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.modal-content {
+    background-color: white;
+    margin: 50px auto;
+    padding: 30px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+    animation: slideIn 0.3s;
+}
+
+@keyframes slideIn {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover {
+    color: #000;
+}
+
+#modalBody {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+#modalBody h4 {
+    color: #2ecc71;
+    margin-top: 15px;
+    margin-bottom: 8px;
+}
+
+#modalBody p {
+    color: #555;
+}
+
+/* সম্পর্কে সেকশন */
+.about {
+    padding: 60px 0;
+    background-color: white;
+}
+
+.about h2 {
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 30px;
+    color: #2c3e50;
+}
+
+.about p {
+    font-size: 1.05em;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+/* ফুটার */
+footer {
+    background-color: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    margin-top: 50px;
+}
+
+/* রেসপন্সিভ ডিজাইন */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2em;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .hero h2 {
+        font-size: 1.5em;
+    }
+
+    .season-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-content {
+        width: 95%;
+        margin: 20px auto;
+    }
+}
